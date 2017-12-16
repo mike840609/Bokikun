@@ -6,6 +6,16 @@ target 'Bokikun' do
   use_frameworks!
 
   # Pods for Bokikun
+# Pods for FirebaseDemo
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
+
+# Pods for Facebook
+pod 'Bolts'
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+
+# image cache
+pod 'Kingfisher', '~> 4.5'
 
 end
