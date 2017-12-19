@@ -15,7 +15,9 @@
 		4D15147D1FE4C9B10004E891 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D15147B1FE4C9B10004E891 /* LaunchScreen.storyboard */; };
 		4D1514851FE4CA590004E891 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D1514841FE4CA590004E891 /* GoogleService-Info.plist */; };
 		4D1514871FE4E01B0004E891 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1514861FE4E01B0004E891 /* MainVC.swift */; };
-		4D1514891FE4F55D0004E891 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1514881FE4F55D0004E891 /* Record.swift */; };
+		4D7C33D41FE8E3AB007062F7 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C33D31FE8E3AB007062F7 /* RecordTableViewCell.swift */; };
+		4D7C33D61FE8E4BA007062F7 /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C33D51FE8E4BA007062F7 /* record.swift */; };
+		4D7C33D81FE8EB49007062F7 /* NewRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C33D71FE8EB49007062F7 /* NewRecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +30,9 @@
 		4D15147E1FE4C9B10004E891 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1514841FE4CA590004E891 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D1514861FE4E01B0004E891 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		4D1514881FE4F55D0004E891 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		4D7C33D31FE8E3AB007062F7 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		4D7C33D51FE8E4BA007062F7 /* record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
+		4D7C33D71FE8EB49007062F7 /* NewRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecordViewController.swift; sourceTree = "<group>"; };
 		4ECD822205CA2D3D008FEB11 /* Pods_Bokikun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bokikun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FF58F2A5ADCF9FF35F3054 /* Pods-Bokikun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bokikun.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bokikun/Pods-Bokikun.release.xcconfig"; sourceTree = "<group>"; };
 		EF3B956127F43A47476528F8 /* Pods-Bokikun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bokikun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bokikun/Pods-Bokikun.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,7 +74,9 @@
 				4D1514721FE4C9B10004E891 /* AppDelegate.swift */,
 				4D1514741FE4C9B10004E891 /* ViewController.swift */,
 				4D1514861FE4E01B0004E891 /* MainVC.swift */,
-				4D1514881FE4F55D0004E891 /* Record.swift */,
+				4D7C33D31FE8E3AB007062F7 /* RecordTableViewCell.swift */,
+				4D7C33D51FE8E4BA007062F7 /* record.swift */,
+				4D7C33D71FE8EB49007062F7 /* NewRecordViewController.swift */,
 				4D1514761FE4C9B10004E891 /* Main.storyboard */,
 				4D1514791FE4C9B10004E891 /* Assets.xcassets */,
 				4D15147B1FE4C9B10004E891 /* LaunchScreen.storyboard */,
@@ -196,6 +202,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -206,6 +213,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFloatLabeledTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -239,9 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7C33D81FE8EB49007062F7 /* NewRecordViewController.swift in Sources */,
 				4D1514751FE4C9B10004E891 /* ViewController.swift in Sources */,
 				4D1514871FE4E01B0004E891 /* MainVC.swift in Sources */,
-				4D1514891FE4F55D0004E891 /* Record.swift in Sources */,
+				4D7C33D41FE8E3AB007062F7 /* RecordTableViewCell.swift in Sources */,
+				4D7C33D61FE8E4BA007062F7 /* record.swift in Sources */,
 				4D1514731FE4C9B10004E891 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

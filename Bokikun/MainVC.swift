@@ -31,11 +31,6 @@ class MainVC: UIViewController {
         RecordTableView.delegate = self
         RecordTableView.dataSource = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     
     func loadData(){
         if let currentUser = Auth.auth().currentUser {
@@ -65,7 +60,15 @@ class MainVC: UIViewController {
         AvaImg.layer.cornerRadius = AvaImg.frame.height/2
         AvaImg.clipsToBounds = true
     }
+
+    
+    @IBAction func handleNewRecord(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "NewRecordViewController") as! NewRecordViewController
+        let navController = UINavigationController(rootViewController: vc)
+        present(navController, animated: true, completion: nil)
+    }
 }
+
 
 extension MainVC:UITableViewDelegate , UITableViewDataSource{
     
@@ -78,11 +81,14 @@ extension MainVC:UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RecordTableViewCell
         
         return cell
     }
     
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
+    }
+
     
 }

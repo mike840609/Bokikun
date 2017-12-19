@@ -18,4 +18,7 @@ pod 'FBSDKLoginKit'
 # image cache
 pod 'Kingfisher', '~> 4.5'
 
+# textfield
+pod 'JVFloatLabeledTextField'
+
 end

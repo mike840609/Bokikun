@@ -39,6 +39,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.11)
+  - JVFloatLabeledTextField (1.2.1)
   - Kingfisher (4.5.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -52,6 +53,7 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
+  - JVFloatLabeledTextField
   - Kingfisher (~> 4.5)
 
 SPEC CHECKSUMS:
@@ -65,9 +67,10 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
+  JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
   Kingfisher: 26ae0473102b77b575da51960c932431e3745407
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 1b167cd98d6cc00187c7f0c9f79690ba507dc777
+PODFILE CHECKSUM: bcf3eb9cc990a8b57035471303a4c92d2a0a106f
 
 COCOAPODS: 1.3.1
